@@ -158,6 +158,10 @@ public class MainActivity extends AppCompatActivity {
         if(cursor == null){
             return;
         }
+        //写真が1つもなかった場合処理を抜ける
+        if(cursor.getCount() == 0){
+            return;
+        }
 
         int nowCursorPosition = cursor.getPosition();
         int tmpCursorPosition = nowCursorPosition + moveFlg;
